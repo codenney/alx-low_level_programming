@@ -23,7 +23,7 @@ int main(void)
 		{
 			c = j / 10;
 			d = j % 10;
-			
+
 			if (a < c || (a == c && b < d))
 			{
 				putchar(a + '0');
@@ -39,10 +39,10 @@ int main(void)
 				}
 			}
 
-			
+
 			j++;
 		}
-		
+
 		i++;
 	}
 	putchar('\n');
