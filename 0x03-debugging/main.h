@@ -14,6 +14,9 @@ int _abs(int);
 int add(int, int);
 int print_last_digit(int);
 void print_to_98(int n);
+
 void positive_or_negative(int n);
+int largest_number(int a, int b, int c);
+
 
 #endif
