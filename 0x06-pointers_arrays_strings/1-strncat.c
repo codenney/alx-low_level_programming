@@ -30,13 +30,13 @@ int findLength(char *string)
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int count, len_dest, len_src;
+	int count, len_dest, final_count_of_desc;
 
 	count = 0;
 
 	len_dest = findLength(dest);
-	len_src = findLength(src);
-	int final_count_of_desc = len_dest;
+	/*len_src = findLength(src);*/
+	final_count_of_desc = len_dest;
 
 	while (count < n && src[count] != '\0')
 	{
