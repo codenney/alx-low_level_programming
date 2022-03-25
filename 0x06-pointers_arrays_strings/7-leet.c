@@ -46,7 +46,7 @@ char *leet(char *ch)
 				ch[i] = j + '0';
 			}
 			j++;
-			
+	
 		}
 		i++;
 	}
