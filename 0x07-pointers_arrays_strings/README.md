@@ -13,3 +13,4 @@
 | 6   | A function that prints the chessboard                                              | 7-print_chessboard.c |
 | 7   | A function that prints the sum of the two diagonals of a square matrix of integers | 8-print_diagsums.c   |
 | 8   | A function that sets the value of a pointer to a char                              | 100-set_string.c     |
+| 9   | A file that contains the password for the crackme2 executable                      | 101-crackme_password |
