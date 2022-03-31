@@ -1,6 +1,6 @@
-## Project for a Pointer that point to a Pointer that point to a Pointer
+## 0x08. C - Recursion
 
-## So, you can dereference a dereference to a dereference
+## We need to go deeper
 
 | s/n | Description                                                                                                      | name                    |
 | --- | ---------------------------------------------------------------------------------------------------------------- | ----------------------- |
