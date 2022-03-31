@@ -2,7 +2,7 @@
 
 /**
  * _puts_recursion - Function entry
- * Description: function that prints a string, followed by a new line
+ * Description: A function that prints a string, followed by a new line
  * @s: variable that houses the base address
  * Return: See nothing!
  */
