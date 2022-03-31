@@ -2,15 +2,14 @@
 
 ## So, you can dereference a dereference to a dereference
 
-| s/n | Description                                                                        | name                 |
-| --- | ---------------------------------------------------------------------------------- | -------------------- |
-| 0   | A function that fills memory with a constant byte                                  | 0-memset.c           |
-| 1   | A function that copies memory area                                                 | 1-memcpy.c           |
-| 2   | A function that locates a character in a string                                    | 2-strchr.c           |
-| 3   | A function that gets the length of a prefix substring                              | 3-strspn.c           |
-| 4   | A function that searches a string for any of a set of bytes                        | 4-strpbrk.c          |
-| 5   | A function that locates a substring                                                | 5-strstr.c           |
-| 6   | A function that prints the chessboard                                              | 7-print_chessboard.c |
-| 7   | A function that prints the sum of the two diagonals of a square matrix of integers | 8-print_diagsums.c   |
-| 8   | A function that sets the value of a pointer to a char                              | 100-set_string.c     |
-| 9   | A file that contains the password for the crackme2 executable                      | 101-crackme_password |
+| s/n | Description                                                                                                      | name                    |
+| --- | ---------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| 0   | A function that prints a string, followed by a new line                                                          | 0-puts_recursion.c      |
+| 1   | A function that prints a string in reverse                                                                       | 1-print_rev_recursion.c |
+| 2   | A function that returns the length of a string                                                                   | 2-strlen_recursion.c    |
+| 3   | A function that returns the factorial of a given number                                                          | 3-factorial.c           |
+| 4   | A function that returns the value of x raised to the power of y                                                  | 4-pow_recursion.c       |
+| 5   | A function that returns the natural square root of a number                                                      | 5-sqrt_recursion.c      |
+| 6   | A function that returns 1 if the input integer is a prime number, otherwise return 0                             | 6-is_prime_number.c     |
+| 100 | A function that returns 1 if a string is a palindrome and 0 if not                                               | 100-is_palindrome.c     |
+| 101 | A unction that compares two strings and returns 1 if the strings can be considered identical, otherwise return 0 | 101-wildcmp.c           |
