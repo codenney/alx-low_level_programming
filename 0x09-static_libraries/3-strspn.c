@@ -2,33 +2,27 @@
 
 /**
  * _strspn - gets the length of a prefix substring.
- * Description: A function that gets the length of a prefix substring
  * @s: initial segment.
  * @accept: accepted bytes.
  * Return: the number of accepted bytes.
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i = 0;
+unsigned int i, j, bool;
 
-	while (s[i] != '\0')
-	{
-		unsigned int j = 0, flag = 1;
-
-		while (accept[j] != '\0')
-		{
-			if (accept[j] == s[i])
-			{
-				flag = 0;
-				break;
-			}
-
-			j++;
-		}
-		if (flag == 1)
-			break;
-		i++;
-	}
-
-	return (i);
+for (i = 0; *(s + i) != '\0'; i++)
+{
+bool = 1;
+for (j = 0; *(accept + j) != '\0'; j++)
+{
+if (*(s + i) == *(accept + j))
+{
+bool = 0;
+break;
+}
+}
+if (bool == 1)
+break;
+}
+return (i);
 }
