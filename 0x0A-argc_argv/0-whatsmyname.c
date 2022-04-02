@@ -7,7 +7,7 @@
  * @argv: the array of character pointers
  * Return: 0 if successful
  */
-void main(int __attribute__((__unused__)) argc, char **argv)
+int main(int __attribute__((__unused__)) argc, char **argv)
 {
 	char *myName = argv[0];
 
