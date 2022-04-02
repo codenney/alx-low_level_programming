@@ -18,18 +18,21 @@ int main(int argc, char **argv)
 
 		while (i < argc)
 		{
-			char *argumentValue = argv[i];
-			int convertValue = atoi(argumentValue);
+			int j = 0;
 
-			if (convertValue)
+			while (argv[i][j] != '\0')
 			{
-				sum += convertValue;
+
+				if (!isdigit(argv[i][j]))
+				{
+					printf("Error\n");
+					return (1);
+				}
+				j++;
 			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
+
+			sum += atoi(argv[i]);
+
 			i++;
 		}
 		printf("%d\n", sum);
