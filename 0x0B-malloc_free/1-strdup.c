@@ -20,8 +20,8 @@ int findLength(char *string)
 
 /**
  * _strdup - Function entry
- * Description: A function that returns a pointer to a newly allocated space in memory
- * ...which contains a copy of the string given as a parameter
+ * Description: A function that returns a pointer to a newly allocated space
+ * in memory which contains a copy of the string given as a parameter
  * @str: the string to copy to the new memory
  * Return: a pointer to the duplicated string
  * NULL if insufficient memory was available
@@ -33,19 +33,19 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	
+
 	length = findLength(str);
 	space = (char *)malloc(length * sizeof(char));
 
 	if (space == NULL)
 		return (NULL);
-	
+
 	while (i < length)
 	{
 		*(space + i) = str[i];
 		i++;
 	}
-	
+
 	return (space);
 	free(space);
 }
