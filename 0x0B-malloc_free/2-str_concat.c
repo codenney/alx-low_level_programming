@@ -43,6 +43,9 @@ char *str_concat(char *s1, char *s2)
 
 	space = (char *)malloc((totallength * sizeof(char)) + 1);
 
+	if (space == NULL)
+		return NULL;
+
 	while (s1[i] != '\0')
 	{
 		space[j] = s1[i];
