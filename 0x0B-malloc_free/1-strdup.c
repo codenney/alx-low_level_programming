@@ -35,7 +35,7 @@ char *_strdup(char *str)
 		return (NULL);
 
 	length = findLength(str);
-	space = (char *)malloc(length * sizeof(char));
+	space = (char *)malloc(length * sizeof(char) + 1);
 
 	if (space == NULL)
 		return (NULL);
