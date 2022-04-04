@@ -1,12 +1,13 @@
-## 0x0A. C - argc, argv
+## 0x0B. C - malloc, free
 
-## Command-line Arguments in C
+## Dynamic Memory Allocation
 
-| s/n | Description                                                                             | name            |
-| --- | --------------------------------------------------------------------------------------- | --------------- |
-| 0   | A program that prints its name, followed by a new line                                  | 0-whatsmyname.c |
-| 1   | A program that prints the number of arguments passed into it                            | 1-args.c        |
-| 2   | A program that prints all arguments it receives                                         | 2-args.c        |
-| 3   | A program that multiplies two numbers                                                   | 3-mul.c         |
-| 4   | A program that adds positive numbers                                                    | 4-add.c         |
-| 5   | A program that prints the minimum number of coins to make change for an amount of money | 100-change.c    |
+| s/n | Description                                                                                                                      | name             |
+| --- | -------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| 0   | A function that creates an array of chars, and initializes it with a specific char                                               | 0-create_array.c |
+| 1   | A function that returns a pointer to a newly allocated space in memory, which contains a copy of the string given as a parameter | 1-strdup.c       |
+| 2   | A function that concatenates two strings                                                                                         | 2-str_concat.c   |
+| 3   | A function that returns a pointer to a 2 dimensional array of integers                                                           | 3-alloc_grid.c   |
+| 4   | A function that frees a 2 dimensional grid previously created by your alloc_grid function                                        | 4-free_grid.c    |
+| 5   |                                                                                                                                  |                  |
+| 6   |                                                                                                                                  |                  |
