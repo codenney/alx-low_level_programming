@@ -21,15 +21,13 @@ char *create_array(unsigned int size, char c)
 
 	if (space == NULL)
 		return (NULL);
-	else
+
+	while (count < size)
 	{
-		while (count < size)
-		{
-			*(space + count) = c;
-			count++;
-		}
-		return (space);
+		*(space + count) = c;
+		count++;
 	}
+	return (space);
 
 	free(space);
 }
