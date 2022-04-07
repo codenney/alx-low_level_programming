@@ -1,42 +1,52 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 /**
-* *argstostr - Entry point
-* Description - A function that concatenates all
-* the arguments of your program
-* *@ac: the function accepts an input saved into ac
-* *@av: the function accepts an input saved into av
-* Return: Success (0)
-*/
+ * argstostr - Function entry
+ * Description: A function that concatenates all the arguments of your program
+ * @ac: holds the count of the argument
+ * @av: array of string
+ * Return: a pointer to a new string
+ * ...NULL if it fails
+ */
 char *argstostr(int ac, char **av)
 {
-	char *a, *retp;
-	int i, j, total;
+	char *space, *retptr;
+	int argCount = 0, charTotal = 0;
+	int i = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	for (i = 0, total = 0; i < ac; i++)
+	while (argCount < ac)
 	{
-		for (j = 0; *(*(av + i) + j) != '\0'; j++, total++)
-			;
-		total++;
-	}
-	total++;
-	a = malloc(total * sizeof(char));
-	if (a == NULL)
-		return (NULL);
+		int stringCount = 0;
 
-	retp = a;
-	for (i = 0; i < ac; i++)
-	{
-		for (j = 0; av[i][j] != '\0'; j++)
+		while (av[argCount][stringCount] != '\0')
 		{
-			*a = av[i][j];
-			a++;
+			stringCount++;
+			charTotal++;
 		}
-		*a = '\n';
-		a++;
+		charTotal++;
+		argCount++;
 	}
-	return (retp);
+	charTotal++;
+
+	space = (char *)malloc(charTotal * sizeof(char));
+	if (space == NULL)
+		return (NULL);
+	retptr = space;
+
+	while (i < ac)
+	{
+		int j = 0;
+
+		while (av[i][j] != '\0')
+		{
+			*space = *(*(av + i) + j);
+			space++;
+			j++;
+		}
+		*space = '\n';
+		space++;
+		i++;
+	}
+	return (retptr);
 }
