@@ -1,52 +1,42 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * argstostr - Function entry
- * Description: A function that concatenates all the arguments of your program
- * @ac: holds the count of the argument
- * @av: array of string
- * Return: a pointer to a new string
- * ...NULL if it fails
- */
+* *argstostr - Entry point
+* Description - A function that concatenates all
+* the arguments of your program
+* *@ac: the function accepts an input saved into ac
+* *@av: the function accepts an input saved into av
+* Return: Success (0)
+*/
 char *argstostr(int ac, char **av)
 {
-	char *space, *retptr;
-	int argCount = 0, charTotal = 0;
-	int i = 0;
+	char *a, *retp;
+	int i, j, total;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	while (argCount < ac)
+	for (i = 0, total = 0; i < ac; i++)
 	{
-		int stringCount = 0;
-
-		while (av[argCount][stringCount] != '\0')
-		{
-			stringCount++;
-			charTotal++;
-		}
-		argCount++;
+		for (j = 0; *(*(av + i) + j) != '\0'; j++, total++)
+			;
+		total++;
 	}
-	charTotal++;
-
-	space = (char *)malloc(charTotal * sizeof(char));
-
-	if (space == NULL)
+	total++;
+	a = malloc(total * sizeof(char));
+	if (a == NULL)
 		return (NULL);
-	retptr = space;
 
-	while (i < ac)
+	retp = a;
+	for (i = 0; i < ac; i++)
 	{
-		int j = 0;
-
-		while (av[i][j] != '\0')
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			*space = *(*(av + i) + j);
-			space++;
-			j++;
+			*a = av[i][j];
+			a++;
 		}
-		*space = '\n';
-		space++;
-		i++;
+		*a = '\n';
+		a++;
 	}
-	return (retptr);
+	return (retp);
 }
