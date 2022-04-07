@@ -9,5 +9,5 @@
 | 2   | A function that concatenates two strings                                                                                         | 2-str_concat.c   |
 | 3   | A function that returns a pointer to a 2 dimensional array of integers                                                           | 3-alloc_grid.c   |
 | 4   | A function that frees a 2 dimensional grid previously created by your alloc_grid function                                        | 4-free_grid.c    |
-| 5   |                                                                                                                                  |                  |
-| 6   |                                                                                                                                  |                  |
+| 5   | A function that concatenates all the arguments of your program                                                                   | 100-argstostr.c  |
+| 6   | A function that splits a string into words                                                                                       | 101-strtow.c     |
