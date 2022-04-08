@@ -21,7 +21,7 @@ int *array_range(int min, int max)
 	if (space == NULL)
 		return (NULL);
 
-	while (i <= size)
+	while (min <= max)
 	{
 		space[i] = min;
 		min++;
