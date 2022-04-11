@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
+#include "dog.h"
 
 int _putchar(int ch);
 
