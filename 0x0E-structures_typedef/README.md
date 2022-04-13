@@ -1,11 +1,12 @@
-## 0x0D. C - Preprocessor
+## 0x0E. C - Structures, typedef
 
-## The Pre-processor and Macro series
+## Is creating your datatype a thing? Oh, Yes!
 
-| s/n | Description                                                                                | name                    |
-| --- | ------------------------------------------------------------------------------------------ | ----------------------- |
-| 0   | A header file that defines a macro named SIZE as an abbreviation for the token 1024        | 0-object_like_macro.h   |
-| 1   | A header file that defines a macro named PI as an abbreviation for the token 3.14159265359 | 1-pi.h                  |
-| 2   | A program that prints the name of the file it was compiled from, followed by a new line    | 2-main.c                |
-| 3   | A function-like macro ABS(x) that computes the absolute value of a number x                | 3-function_like_macro.h |
-| 4   | A function-like macro SUM(x, y) that computes the sum of the numbers x and y               | 4-sum.h                 |
+| s/n | Description                                                   | name          |
+| --- | ------------------------------------------------------------- | ------------- |
+| 0   | Define a new type struct dog                                  | dog.h         |
+| 1   | A function that initialize a variable of type struct dog      | 1-init_dog.c  |
+| 2   | A function that prints a struct dog                           | 2-print_dog.c |
+| 3   | Define a new type dog_t as a new name for the type struct dog | dog.h         |
+| 4   | A function that creates a new dog                             | 4-new_dog.c   |
+| 5   | A function that frees dogs                                    | 5-free_dog.c  |
