@@ -9,7 +9,8 @@
  */
 int main(int argc, char **argv)
 {
-	int a, b, result;
+	int a, b;
+	int result = 0;
 	char *sign = argv[2];
 
 	if (argc != 4)
