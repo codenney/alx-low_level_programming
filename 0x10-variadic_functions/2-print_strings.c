@@ -16,10 +16,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_list arg;
 
+	va_start(arg, n);
+
 	if (separator == NULL)
 		return;
-
-	va_start(arg, n);
 
 	while (i < n)
 	{
