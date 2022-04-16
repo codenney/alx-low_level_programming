@@ -12,6 +12,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i = 0;
 	char *sep = "";
+	va_list args;
 
 	converter toCheck[] = {
 		{"s", _printString},
@@ -20,7 +21,8 @@ void print_all(const char * const format, ...)
 		{"c", _printChar},
 	};
 
-	va_list args;
+	if (format == NULL)
+		return;
 
 	va_start(args, format);
 
