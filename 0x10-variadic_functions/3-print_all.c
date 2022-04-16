@@ -21,12 +21,12 @@ void print_all(const char * const format, ...)
 		{"c", _printChar},
 	};
 
-	if (format == NULL)
-		return;
+	/*if (format == NULL)
+		return;*/
 
 	va_start(args, format);
 
-	while (format[i / 4] != '\0')
+	while (format != NULL && format[i / 4] != '\0')
 	{
 		unsigned int j = i % 4;
 
