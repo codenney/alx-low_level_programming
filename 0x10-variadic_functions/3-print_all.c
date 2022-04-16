@@ -21,9 +21,6 @@ void print_all(const char * const format, ...)
 		{"c", _printChar},
 	};
 
-	/*if (format == NULL)
-		return;*/
-
 	va_start(args, format);
 
 	while (format != NULL && format[i / 4] != '\0')
