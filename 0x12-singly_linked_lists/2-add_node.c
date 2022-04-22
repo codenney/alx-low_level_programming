@@ -2,7 +2,8 @@
 
 /**
  * add_node - Function entry
- * Description: A function that adds a new node at the end of a list_t list
+ * Description: A function that adds a new node at the beginning
+ * of a list_t list
  * @head: A pointer to the address of the head element
  * @str: String to duplicate
  * Return: address of the new element
