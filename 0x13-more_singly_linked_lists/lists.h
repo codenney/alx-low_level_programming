@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int _putchar(char c);
+int _putchar(int c);
 
 /**
  * struct listint_s - singly linked list
