@@ -30,24 +30,23 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (*head);
 	}
 	temp = *head;
-	printf("Did it get here?\n");
+
 	while (temp != NULL)
 	{
 		temp = temp->next;
 		no_of_nodes++;
 	}
-	printf("Printing the number of nodes = %d\n", no_of_nodes);
 
 	if (idx > no_of_nodes)
 		return (NULL);
-	printf("What about here?\n");
+
 	temp = *head;
 	while (i < idx)
 	{
 		temp = temp->next;
 		i++;
 	}
-	printf("Did it finish traversing??\n");
+
 	newnode->next = temp->next;
 	temp->next =  newnode;
 
