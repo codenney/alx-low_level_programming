@@ -18,21 +18,21 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
+
 	file_from = open(argv[1], O_RDONLY);
-	if (file_from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_APPEND | O_TRUNC, 0664);
-	if (file_to == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
-	to_read = read(file_from, buf, length);
-	to_write = write(file_to, buf, to_read);
 	print_error(to_read, to_write, argv);
+
+	while (length == 1024)
+	{
+		length = read(file_from, buf, 1024);
+		if (length == -1)
+			print_error(-1, 0, argv);
+
+		to_write = write(file_to, buf, to_read);
+		if (to_write == -1)
+			print_error(0, -1, argv);
+	}
 
 	close_from = close(file_from);
 
