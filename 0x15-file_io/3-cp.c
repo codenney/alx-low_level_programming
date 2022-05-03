@@ -9,7 +9,7 @@
  */
 int main(int argc, char **argv)
 {
-	int file_from, file_to, to_read, to_write, close_from, close_to;
+	int file_from, file_to, to_write, close_from, close_to;
 	int length = 1024;
 	char buf[1024];
 
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_APPEND | O_TRUNC, 0664);
-	print_error(to_read, to_write, argv);
+	print_error(file_from, file_to, argv);
 
 	while (length == 1024)
 	{
@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 		if (length == -1)
 			print_error(-1, 0, argv);
 
-		to_write = write(file_to, buf, to_read);
+		to_write = write(file_to, buf, length);
 		if (to_write == -1)
 			print_error(0, -1, argv);
 	}
