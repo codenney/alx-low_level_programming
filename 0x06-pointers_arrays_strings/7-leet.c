@@ -1,24 +1,6 @@
 #include <stdio.h>
 
 /**
- * findLength - Function entry
- * Description: A function that find the length of a string
- * @string: A pointer to the string variable
- * Return: An integer as the length of string
- */
-int findLength(char *string)
-{
-	int i = 0;
-
-	while (string[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-
-/**
  * leet - Function entry
  * Description: A function that encodes a string into 1337
  * @ch: Holds the address of the string
@@ -32,8 +14,8 @@ int findLength(char *string)
 char *leet(char *ch)
 {
 	int i = 0, j;
-	/*int len = findLength(ch);*/
-	char leet[9] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T', '\0'};
+	char leet[6] = {'A', 'E', 'O', 'T', 'L', '\0'};
+	int intLeet[5] = {4, 3, 0, 7, 1};
 
 	while (ch[i] != '\0')
 	{
@@ -43,7 +25,7 @@ char *leet(char *ch)
 		{
 			if (ch[i] == leet[j] + 32 || ch[i] == leet[j])
 			{
-				ch[i] = j + '0';
+				ch[i] = intLeet[j] + '0';
 			}
 			j++;
 
