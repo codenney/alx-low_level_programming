@@ -4,7 +4,9 @@
  * *rot13 - function entry
  * Description: A function that encodes a string using rot13
  * Return: the array
- * char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
+ * @s: parameter that hold the string
+ * char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13)
+ * it is a simple letter substitution cipher.\n";
  */
 char *rot13(char *s)
 {
