@@ -1,44 +1,22 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * findLength - Function entry
- * Description: A function that find the length of a string
- * @string: A pointer to the string variable
- * Return: An integer as the length of string
+ * *string_toupper - function entry
+ * Description: A function that changes all lowercase
+ * letters of a string to uppercase
+ * @a: the string address
+ * Return: the string address
  */
-int findLength(char *string)
+char *string_toupper(char *a)
 {
-	int i = 0;
+	int count = 0;
 
-	while (string[i] != '\0')
+	while (a[count] != '\0')
 	{
-		i++;
-	}
-	return (i);
-}
-
-
-/**
- * string_toupper - Function entry
- * Description: A function that changes all lowercase letters of
- * ...a string to uppercase
- * @ch: The string variable
- * Return: A pointer address to the updated string
- */
-char *string_toupper(char *ch)
-{
-	int counter = 0;
-	int len = findLength(ch);
-
-	while (counter < len)
-	{
-		if (ch[counter] >= 97 && ch[counter] <= 122)
-		{
-			ch[counter] = *(ch + counter) - 32;
-		}
-
-		counter++;
+		if (a[count] >= 'a' && a[count] <= 'z')
+			a[count] = a[count] - 32;
+		count++;
 	}
 
-	return (ch);
+	return (a);
 }
