@@ -41,6 +41,7 @@ char *str_concat(char *s1, char *s2)
 		mem[i] = s2[j];
 		j++, i++;
 	}
+	mem[i] = '\0';
 
 	return (mem);
 }
