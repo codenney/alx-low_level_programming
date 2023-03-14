@@ -1,69 +1,63 @@
 #include "main.h"
+int findLength(char *str);
 
 /**
- * findLength - Function entry
- * Description: A function that find the length of a string
- * @string: A pointer to the string variable
- * Return: An integer as the length of string
- */
-int findLength(char *string)
-{
-	int i = 0;
-
-	while (string[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
- * str_concat - Function entry
+ * *str_concat - function entry
+ * @s
  * Description: A function that concatenates two strings
- * @s1: first string
- * @s2: second string
- * Return: pointer to a newly allocated space with the s1
- * ...or NULL on failure
+ * @s1: parameter 1
+ * @s2: parameter 2
+ * Return: NULL on failure
+ * returned pointer should point to a newly allocated space in memory
+ * which contains the contents of s1, followed by the contents of s2,
+ * and null terminated
  */
-
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int l1, l2, totallength, i = 0, j = 0;
-	char *space;
+	int sum, j, i = 0;
+	char *mem = NULL;
 
 	if (s1 == NULL)
 		s1 = "";
-
 	if (s2 == NULL)
 		s2 = "";
 
-	l1 = findLength(s1);
-	l2 = findLength(s2);
-	totallength = l1 + l2;
+	sum = findLength(s1) + findLength(s2) + 1;
 
-	space = (char *)malloc((totallength * sizeof(char)) + 1);
+	mem = (char *)malloc(sum * sizeof(char));
 
-	if (space == NULL)
+	if (mem == NULL)
 		return (NULL);
 
 	while (s1[i] != '\0')
 	{
-		space[j] = s1[i];
+		mem[i] = s1[i];
 		i++;
-		j++;
 	}
 
-	i = 0;
-	while (s2[i] != '\0')
+	j = 0;
+	while (s2[j] != '\0')
 	{
-		space[j] = s2[i];
-		i++;
-		j++;
+		mem[i] = s2[j];
+		j++, i++;
 	}
 
-	space[j] = '\0';
+	return (mem);
+}
 
-	return (space);
+/**
+ * findLength - function entry
+ * Description: find the length of a string
+ * @str: parameter
+ * Return: the length of the string
+ */
+int findLength(char *str)
+{
+	int i = 0;
 
-	free(space);
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
