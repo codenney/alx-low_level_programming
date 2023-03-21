@@ -1,20 +1,19 @@
 #include "main.h"
 
 /**
- * main - Main entry
- * Description: program that prints the name of the file it
- * ...was compiled from, followed by a new line
+ * main - function entry
+ * Description: A program that prints the name of the file
+ * it was compiled from, followed by a new line
  * Return: 0 as success
  */
 int main(void)
 {
-	int i = 0;
-	char *pname = __FILE__;
+	int i;
+	char *fname = __FILE__;
 
-	while (pname[i] != '\0')
+	for (i = 0; fname[i] != '\0'; i++)
 	{
-		_putchar(pname[i]);
-		i++;
+		_putchar(fname[i]);
 	}
 	_putchar('\n');
 
