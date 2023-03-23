@@ -1,9 +1,11 @@
+#include "3-calc.h"
+
 /**
- * op_add - function entry
- * Description: An addition function
+ * op_add - Function entry
+ * Description: A function to add 2 integers
  * @a: value to be added to b
- * @b: value to be added to a
- * Return: the sum of a and b
+ * @b: value to add to a
+ * Return: added value
  */
 int op_add(int a, int b)
 {
@@ -11,11 +13,11 @@ int op_add(int a, int b)
 }
 
 /**
- * op_sub - function entry
- * Description: A subtraction function
- * @a: value b is to be taken from
- * @b: value to subtract from a
- * Return: the difference of a and b
+ * op_sub - Function entry
+ * Description: A function to sub 2 integers
+ * @a: value to be sub to b
+ * @b: value to sub to a
+ * Return: sub value
  */
 int op_sub(int a, int b)
 {
@@ -23,11 +25,11 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul - function entry
- * Description: A multiplication function
- * @a: value to multiply with b
- * @b: value to multiply with a
- * Return: the product of a and b. Prototype
+ * op_mul - Function entry
+ * Description: A function to multiply 2 integers
+ * @a: value to be multiply to b
+ * @b: value to multiply to a
+ * Return: multiplied value
  */
 int op_mul(int a, int b)
 {
@@ -35,11 +37,11 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - function entry
- * Description: A division function
- * @a: value to be divided by b
- * @b: value a to be divided by
- * Return: the result of the division of a by b
+ * op_div - Function entry
+ * Description: A function to divide 2 integers
+ * @a: value to be divide to b
+ * @b: value to divide by a
+ * Return: added value
  */
 int op_div(int a, int b)
 {
@@ -47,12 +49,12 @@ int op_div(int a, int b)
 }
 
 /**
- * op_mod - function entry
- * Description: A remainder function
- * @a: value to find remainder by b
- * @b: value to find remainder by a
- * Return: the remainder of the division of a by b
-*/
+ * op_mod - Function entry
+ * Description: A function to modulo 2 integers
+ * @a: value to be find it modulo to b
+ * @b: value to divide to a
+ * Return: modulo value
+ */
 int op_mod(int a, int b)
 {
 	return (a % b);
