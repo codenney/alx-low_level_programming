@@ -8,27 +8,9 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i = 31;
-
-	if (n == 0)
+	if (n > 1)
 	{
-		_putchar('0');
-		return;
+		print_binary(n >> 1);
 	}
-
-	while (i >= 0)
-	{
-		if (n & (1 << i))
-			break;
-		i--;
-	}
-
-	while (i >= 0)
-	{
-		if (n & (1 << i))
-			_putchar('1');
-		else
-			_putchar('0');
-		i--;
-	}
+	_putchar((n & 1) + '0');
 }
